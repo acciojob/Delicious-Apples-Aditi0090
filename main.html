@@ -20,7 +20,7 @@
             height: 100vh;
         }
 
-        .container {
+        .product {
             background: white;
             padding: 20px;
             border-radius: 15px;
@@ -45,21 +45,22 @@
             border-radius: 10px;
         }
 
-        .photo-album {
+        .photo-album ul {
             display: flex;
             justify-content: space-between;
             margin-top: 10px;
+            list-style: none;
         }
 
-        .photo-album img {
-            width: 22%;
+        .photo-album ul li img {
+            width: 50px;
             border: 2px solid white;
             border-radius: 5px;
             cursor: pointer;
             transition: 0.3s;
         }
 
-        .photo-album img:hover {
+        .photo-album ul li img:hover {
             border-color: #ff4500;
         }
 
@@ -89,15 +90,20 @@
             margin: 10px 0;
         }
 
-        .variant img {
-            width: 25px;
-            margin-right: 5px;
+        .variant ul {
+            list-style: none;
+            display: flex;
+            gap: 5px;
+        }
+
+        .variant ul li img {
+            width: 30px;
             cursor: pointer;
             border-radius: 50%;
             transition: 0.3s;
         }
 
-        .variant img:hover {
+        .variant ul li img:hover {
             border: 2px solid #ff4500;
         }
 
@@ -132,20 +138,25 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="product">
+        <!-- Product Photo Section -->
         <div class="product__photo">
             <div class="photo-container">
                 <div class="photo-main">
                     <img id="main-apple" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png" alt="Green Apple">
                 </div>
                 <div class="photo-album">
-                    <img onclick="changeApple('green')" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png" alt="Green Apple">
-                    <img onclick="changeApple('yellow')" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png" alt="Yellow Apple">
-                    <img onclick="changeApple('orange')" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302427/codepen/delicious-apples/orange-apple.png" alt="Orange Apple">
-                    <img onclick="changeApple('red')" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302285/codepen/delicious-apples/red-apple.png" alt="Red Apple">
+                    <ul>
+                        <li><img onclick="changeApple('green')" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png" alt="Green Apple"></li>
+                        <li><img onclick="changeApple('yellow')" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png" alt="Yellow Apple"></li>
+                        <li><img onclick="changeApple('orange')" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302427/codepen/delicious-apples/orange-apple.png" alt="Orange Apple"></li>
+                        <li><img onclick="changeApple('red')" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302285/codepen/delicious-apples/red-apple.png" alt="Red Apple"></li>
+                    </ul>
                 </div>
             </div>
         </div>
+
+        <!-- Product Information Section -->
         <div class="product__info">
             <h1>Delicious Apples</h1>
             <p class="code">CODE: 45999</p>
@@ -153,19 +164,21 @@
 
             <div class="variant">
                 <h3>Select a Color</h3>
-                <img onclick="changeApple('green')" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png" alt="Green Apple">
-                <img onclick="changeApple('yellow')" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png" alt="Yellow Apple">
-                <img onclick="changeApple('orange')" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302427/codepen/delicious-apples/orange-apple.png" alt="Orange Apple">
-                <img onclick="changeApple('red')" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302285/codepen/delicious-apples/red-apple.png" alt="Red Apple">
+                <ul>
+                    <li><img onclick="changeApple('green')" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png" alt="Green Apple"></li>
+                    <li><img onclick="changeApple('yellow')" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png" alt="Yellow Apple"></li>
+                    <li><img onclick="changeApple('orange')" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302427/codepen/delicious-apples/orange-apple.png" alt="Orange Apple"></li>
+                    <li><img onclick="changeApple('red')" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302285/codepen/delicious-apples/red-apple.png" alt="Red Apple"></li>
+                </ul>
             </div>
 
             <div class="description">
                 <h3>BENEFITS</h3>
                 <ul>
-                    <li>Apples are nutritious</li>
-                    <li>Apples may be good for weight loss</li>
-                    <li>Apples may be good for bone health</li>
-                    <li>They're linked to a lower risk of diabetes</li>
+                    <li>✔ Apples are nutritious</li>
+                    <li>✔ Apples may be good for weight loss</li>
+                    <li>✔ Apples may be good for bone health</li>
+                    <li>✔ They're linked to a lower risk of diabetes</li>
                 </ul>
             </div>
 
